@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>繁簡轉換</title>
+		<link rel="stylesheet" href="style.css">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+		<script type="text/javascript" src="tongwen/WFU-ts-mix.js"></script>
+		<script type="text/javascript" src="zclip/jquery.zclip.js"></script>
+
+	<script>
+	$(document).ready(function(){
+		$("#copy-button").zclip({
+			path : "zclip/ZeroClipboard.swf",
+			copy : function(){
+				return $("#txtOutput").val();
+			}
+		});
+
+		$("#clear-button").click(function() {
+			$("#txtOutput").val("");
+			$("#msg").html("文字已清除");
+			$("#msg").css("color","blue");
+			$("#txtOutput").focus();
+		});
+	});
+	</script>
+	</head>
+
+	<body>
+		<div class="col_full">
+			<h1>繁簡轉換</h1>
+			<hr/>
+			<input type="button" value="轉換為繁體" class="col_button" onClick="tongwen_StoT();">
+			<input type="button" value="轉換為簡體" class="col_button" onClick="tongwen_TtoS();">
+			<input type="button" value="複製" class="col_button" id="copy-button">
+			<input type="button" value="清除" class="col_button" id="clear-button">
+			<div id="msg"></div>
+			<textarea id="txtOutput" class="textarea_col"></textarea>
+		</div>
+
+		<div class="footer">
+		Created by Molly Kan - Use <a href="http://www.steamdev.com/zclip/">zClip</a> and <a href="http://www.wfublog.com/2014/12/traditional-simplified-chinese-auto-switch.html">tongwen (WFU Blog)</a>
+	</div>
+	</body>
+</html>
