@@ -7,24 +7,21 @@
 		<link rel="stylesheet" href="style.css">
 		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 		<script type="text/javascript" src="tongwen/WFU-ts-mix.js"></script>
-		<!--<script type="text/javascript" src="zclip/jquery.zclip.js"></script>-->
-	<!--<script>
-	$(document).ready(function(){
-		$("#copy-button").zclip({
-			path : "zclip/ZeroClipboard.swf",
-			copy : function(){
-				return $("#txtOutput").val();
-			}
-		});
+		<script>
+		$(document).ready(function(){
+			$("#copy-button").click(function() {
+				$("#msg").html("文字已複製");
+				$("#msg").css("color","red");
+			});
 
-		$("#clear-button").click(function() {
-			$("#txtOutput").val("");
-			$("#msg").html("文字已清除");
-			$("#msg").css("color","blue");
-			$("#txtOutput").focus();
+			$("#clear-button").click(function() {
+				$("#txtOutput").val("");
+				$("#msg").html("文字已清除");
+				$("#msg").css("color","blue");
+				$("#txtOutput").focus();
+			});
 		});
-	});
-	</script>-->
+		</script>
 	</head>
 
 	<body>
