@@ -9,6 +9,7 @@
 		<script type="text/javascript" src="tongwen/WFU-ts-mix.js"></script>
 		<script>
 		$(document).ready(function(){
+			var client = new ZeroClipboard( document.getElementById("copy-button") );
 			$("#copy-button").click(function() {
 				$("#msg").html("文字已複製");
 				$("#msg").css("color","red");
@@ -37,10 +38,9 @@
 		</div>
 
     	<script src="ZeroClipboard.js"></script>
-    	<script src="main.js"></script>
 
 		<div class="footer">
-		Created by Molly Kan - Use <a href="http://www.steamdev.com/zclip/">zClip</a> and <a href="http://www.wfublog.com/2014/12/traditional-simplified-chinese-auto-switch.html">tongwen (WFU Blog)</a>
+		Created by Molly Kan - Use <a href="https://github.com/zeroclipboard/zeroclipboard">zeroclipboard</a> and <a href="http://www.wfublog.com/2014/12/traditional-simplified-chinese-auto-switch.html">tongwen (WFU Blog)</a>
 	</div>
 	</body>
 </html>
