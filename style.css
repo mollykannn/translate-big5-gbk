@@ -25,8 +25,8 @@ hr {
 /*------------------------------------*\
   Margin, Linebreak
 \*------------------------------------*/
-.linebreak_5 {height:5px;}
-.linebreak_10 {height:10px;}
+.linebreak_5 {height: 5px;}
+.linebreak_10 {height: 10px;}
 
 .margin_right_5 {margin-right: 5px;}
 
@@ -36,14 +36,14 @@ hr {
 \*------------------------------------*/
 /* All Body */
 .full_page {
-	margin:10px;
+	margin: 10px;
 }
 
 /* Column */
 .content_column {
 	background-color: white;
 	padding: 20px;
-	box-shadow:0 1px 3px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* Textarea */
