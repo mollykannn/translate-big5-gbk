@@ -1,46 +1,53 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>繁簡轉換</title>
-		<link rel="stylesheet" href="style.css">
-		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-		<script type="text/javascript" src="tongwen/WFU-ts-mix.js"></script>
-		<script>
-		$(document).ready(function(){
-			var client = new ZeroClipboard( document.getElementById("copy-button") );
-			$("#copy-button").click(function() {
-				$("#msg").html("文字已複製");
-				$("#msg").css("color","red");
-			});
 
-			$("#clear-button").click(function() {
-				$("#txtOutput").val("");
-				$("#msg").html("文字已清除");
-				$("#msg").css("color","blue");
-				$("#txtOutput").focus();
-			});
-		});
-		</script>
-	</head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>繁簡轉換</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="tongwen/WFU-ts-mix.js"></script>
+  <script>
+  $(document).ready(function() {
+    var client = new ZeroClipboard(document.getElementById("copy-button"));
+    $("#copy-button").click(function() {
+      $("#msg").html("文字已複製");
+      $("#msg").css("color", "red");
+    });
 
-	<body>
-		<div class="col_full">
-			<h1>繁簡轉換</h1>
-			<hr/>
-			<input type="button" value="轉換為繁體" class="col_button" onClick="tongwen_StoT();">
-			<input type="button" value="轉換為簡體" class="col_button" onClick="tongwen_TtoS();">
-			<input type="button" value="複製" class="col_button" data-clipboard-target="txtOutput" id="copy-button">
-			<input type="button" value="清除" class="col_button" id="clear-button">
-			<div id="msg"></div>
-			<textarea id="txtOutput" class="textarea_col"></textarea>
-		</div>
+    $("#clear-button").click(function() {
+      $("#txtOutput").val("");
+      $("#msg").html("文字已清除");
+      $("#msg").css("color", "blue");
+      $("#txtOutput").focus();
+    });
+  });
+  </script>
+</head>
 
-    	<script src="ZeroClipboard.js"></script>
+<body>
+	<div class="full_page">
+	  <div class="col_full">
+	    <h1>繁簡轉換</h1>
+	    <hr/>
+	    <div class="linebreak_5"></div>
+	    <input type="button" value="轉換為繁體" class="col_button margin_right_5" onClick="tongwen_StoT();">
+	    <input type="button" value="轉換為簡體" class="col_button margin_right_5" onClick="tongwen_TtoS();">
+	    <input type="button" value="複製" class="col_button margin_right_5" data-clipboard-target="txtOutput" id="copy-button">
+	    <input type="button" value="清除" class="col_button margin_right_5" id="clear-button">
+	    <div id="msg"></div>
+	    <div class="linebreak_10"></div>
+	    <textarea id="txtOutput" class="textarea_col"></textarea>
+	  </div>
 
-		<div class="footer">
-		Created by Molly Kan - Use <a href="https://github.com/zeroclipboard/zeroclipboard">zeroclipboard</a> and <a href="http://www.wfublog.com/2014/12/traditional-simplified-chinese-auto-switch.html">tongwen (WFU Blog)</a>
-	</div>
-	</body>
+	  <script src="ZeroClipboard.js"></script>
+
+		<div class="linebreak_10"></div>
+	  <div class="footer">
+	    Created by Molly Kan - Use <a href="https://github.com/zeroclipboard/zeroclipboard">zeroclipboard</a> and <a href="http://www.wfublog.com/2014/12/traditional-simplified-chinese-auto-switch.html">tongwen (WFU Blog)</a>
+	  </div>
+  </div>
+</body>
+
 </html>
