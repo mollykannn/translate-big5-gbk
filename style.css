@@ -1,3 +1,6 @@
+/*------------------------------------*\
+  Default
+\*------------------------------------*/
 body {
 	width: 100%;
 	background-color: #f0f0f0;
@@ -18,16 +21,41 @@ hr {
 	background-color: #d4d4d4;
 }
 
+
+/*------------------------------------*\
+  Margin, Linebreak
+\*------------------------------------*/
 .linebreak_5 {height:5px;}
 .linebreak_10 {height:10px;}
 
 .margin_right_5 {margin-right: 5px;}
 
+
+/*------------------------------------*\
+  Content
+\*------------------------------------*/
+/* All Body */
 .full_page {
 	margin:10px;
 }
 
-.col_button {
+/* Column */
+.content_column {
+	background-color: white;
+	padding: 20px;
+	box-shadow:0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Textarea */
+.content_textarea {
+	font-size: 1em;
+	font-family: 微軟正黑體;
+	width: 100%;
+	height: 750px;
+}
+
+/* Button */ 
+.content_button {
 	font-size: 16px;
 	font-family: 微軟正黑體;
 	color: #FFF;
@@ -39,7 +67,7 @@ hr {
 					border-radius: 3px;
 }
 
-.col_button:hover {
+.column_button:hover {
 	background-color: #0073cc;
 			 -o-transition: background-color 0.5s ease;
 		 -moz-transition: background-color 0.5s ease;
@@ -47,38 +75,24 @@ hr {
 					transition: background-color 0.5s ease;
 }
 
-#msg {
+/* Message */
+.message {
 	display: inline-block;
 }
 
 @media screen and (max-width: 480px) {
-	.col_button {
+	.content_button {
 		width: 100%;
 		margin: 4px 0;
 	}
 
-	#msg {
+	.message {
 		width: 100%;
 		text-align: center;
 	}
 }
 
-.col_full {
-	background-color: white;
-	padding: 20px;
-	box-shadow:0 1px 3px rgba(0, 0, 0, 0.1);
-		 -moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-					border-radius: 3px;
-}
-
-.textarea_col {
-	font-size: 1em;
-	font-family: 微軟正黑體;
-	width: 100%;
-	height: 750px;
-}
-
+/* Footer */
 .footer {
 	font-size: 0.8em;
 	text-align: center;

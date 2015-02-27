@@ -3,23 +3,23 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <title>繁簡轉換</title>
   <link rel="stylesheet" href="style.css">
-  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-  <script type="text/javascript" src="tongwen/WFU-ts-mix.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="tongwen/WFU-ts-mix.js"></script>
   <script>
   $(document).ready(function() {
     var client = new ZeroClipboard(document.getElementById("copy-button"));
     $("#copy-button").click(function() {
-      $("#msg").html("文字已複製");
-      $("#msg").css("color", "red");
+      $("#message").html("文字已複製");
+      $("#message").css("color", "red");
     });
 
     $("#clear-button").click(function() {
       $("#txtOutput").val("");
-      $("#msg").html("文字已清除");
-      $("#msg").css("color", "blue");
+      $("#message").html("文字已清除");
+      $("#message").css("color", "blue");
       $("#txtOutput").focus();
     });
   });
@@ -28,17 +28,17 @@
 
 <body>
 	<div class="full_page">
-	  <div class="col_full">
+	  <div class="content_column">
 	    <h1>繁簡轉換</h1>
 	    <hr/>
 	    <div class="linebreak_5"></div>
-	    <input type="button" value="轉換為繁體" class="col_button margin_right_5" onClick="tongwen_StoT();">
-	    <input type="button" value="轉換為簡體" class="col_button margin_right_5" onClick="tongwen_TtoS();">
-	    <input type="button" value="複製" class="col_button margin_right_5" data-clipboard-target="txtOutput" id="copy-button">
-	    <input type="button" value="清除" class="col_button margin_right_5" id="clear-button">
-	    <div id="msg"></div>
+	    <input type="button" value="轉換為繁體" class="content_button margin_right_5" onClick="tongwen_StoT();">
+	    <input type="button" value="轉換為簡體" class="content_button margin_right_5" onClick="tongwen_TtoS();">
+	    <input type="button" value="複製" class="content_button margin_right_5" data-clipboard-target="txtOutput" id="copy-button">
+	    <input type="button" value="清除" class="content_button margin_right_5" id="clear-button">
+	    <div id="message"></div>
 	    <div class="linebreak_10"></div>
-	    <textarea id="txtOutput" class="textarea_col"></textarea>
+	    <textarea id="txtOutput" class="content_textarea"></textarea>
 	  </div>
 
 	  <script src="ZeroClipboard.js"></script>
