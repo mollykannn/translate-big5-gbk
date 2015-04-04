@@ -49,7 +49,7 @@ hr {
 /* Textarea */
 .content_textarea {
 	font-size: 1em;
-	font-family: 微軟正黑體;
+	font-family: 微軟正黑體, arial;
 	width: 100%;
 	height: 750px;
 }
@@ -57,7 +57,7 @@ hr {
 /* Button */ 
 .content_button {
 	font-size: 16px;
-	font-family: 微軟正黑體;
+	font-family: 微軟正黑體, arial;
 	color: #FFF;
 	background-color: #0090ff;
 	padding: 8px 15px;
