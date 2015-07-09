@@ -13,7 +13,7 @@ function tongwen_TtoS(){
   var s=document.createElement("script");
   s.language="javascript";
   s.type="text/javascript";
-  s.src="tongwen/tongwen-ts.js";
+  s.src="javascripts/tongwen-ts.js";
   s.id="tongwenlet_cn";
   document.body.appendChild(s);
 }
@@ -24,7 +24,7 @@ function tongwen_StoT(){
   var s=document.createElement("script");
   s.language="javascript";
   s.type="text/javascript";
-  s.src="tongwen/tongwen-st.js";
+  s.src="javascripts/tongwen-st.js";
   s.id="tongwenlet_tw";
   document.body.appendChild(s);
 }

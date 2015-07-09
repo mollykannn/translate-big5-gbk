@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+<header>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <title>繁簡轉換</title>
-  <link rel="stylesheet" href="style.css">
+  <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" />
+  <link href="stylesheets/print.css" media="print" rel="stylesheet" />
+  <!--[if IE]>
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" />
+  <![endif]-->
+</header>
+
+<body>
+	<div class="full_page">
+	  <div class="content_column">
+	    <h1>繁簡轉換</h1>
+	    <hr/>
+	    <div class="linebreak_5"></div>
+	    <input type="button" value="轉換為繁體" class="content_button margin_right_5" onClick="tongwen_StoT();">
+	    <input type="button" value="轉換為簡體" class="content_button margin_right_5" onClick="tongwen_TtoS();">
+	    <input type="button" value="複製" class="content_button margin_right_5" data-clipboard-target="txtOutput" id="copy-button">
+	    <input type="button" value="清除" class="content_button margin_right_5" id="clear-button">
+      <div class="linebreak_10"></div>
+	    <div id="message"></div>
+	    <div class="linebreak_10"></div>
+	    <textarea id="txtOutput" class="content_textarea"></textarea>
+      <footer>
+        Created by Molly Kan - Use <a href="https://github.com/zeroclipboard/zeroclipboard">zeroclipboard</a> and <a href="http://www.wfublog.com/2014/12/traditional-simplified-chinese-auto-switch.html">tongwen (WFU Blog)</a>
+      </footer>
+	  </div>
+  </div>
   <script src="http://code.jquery.com/jquery-latest.js"></script>
-  <script src="tongwen/WFU-ts-mix.js"></script>
+  <script src="javascripts/WFU-ts-mix.js"></script>
+  <script src="javascripts/ZeroClipboard.js"></script>
   <script>
   $(document).ready(function() {
     var client = new ZeroClipboard(document.getElementById("copy-button"));
@@ -24,31 +49,5 @@
     });
   });
   </script>
-</head>
-
-<body>
-	<div class="full_page">
-	  <div class="content_column">
-	    <h1>繁簡轉換</h1>
-	    <hr/>
-	    <div class="linebreak_5"></div>
-	    <input type="button" value="轉換為繁體" class="content_button margin_right_5" onClick="tongwen_StoT();">
-	    <input type="button" value="轉換為簡體" class="content_button margin_right_5" onClick="tongwen_TtoS();">
-	    <input type="button" value="複製" class="content_button margin_right_5" data-clipboard-target="txtOutput" id="copy-button">
-	    <input type="button" value="清除" class="content_button margin_right_5" id="clear-button">
-      <div class="linebreak_10"></div>
-	    <div id="message"></div>
-	    <div class="linebreak_10"></div>
-	    <textarea id="txtOutput" class="content_textarea"></textarea>
-	  </div>
-
-	  <script src="ZeroClipboard.js"></script>
-
-		<div class="linebreak_10"></div>
-	  <div class="footer">
-	    Created by Molly Kan - Use <a href="https://github.com/zeroclipboard/zeroclipboard">zeroclipboard</a> and <a href="http://www.wfublog.com/2014/12/traditional-simplified-chinese-auto-switch.html">tongwen (WFU Blog)</a>
-	  </div>
-  </div>
 </body>
-
 </html>

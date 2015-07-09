@@ -1,0 +1,118 @@
+@font-face {
+  font-family: custom-font;
+  src: local(Heiti TC), local(Microsoft JhengHei);
+  unicode-range: U+4E00-9FFF;
+} 
+
+@font-face {
+  font-family: custom-font;
+  src: local(Helvetica), local(Arial);
+  unicode-range: U+00-024F;
+}
+
+// Variable
+$font-family: custom-font;
+$font-size: 1em;
+$line-height: 1.4em;
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+// Default
+body {
+  width: 100%;
+  background-color: #f0f0f0;
+  font-family: $font-family;
+  font-size: $font-size;
+  margin: 0;
+  line-height: $line-height;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #d4d4d4;
+}
+
+// Margin, Linebreak
+.linebreak_5 {
+  height: 5px;
+}
+
+.linebreak_10 {
+  height: 10px;
+}
+
+.margin_right_5 {
+  margin-right: 5px;
+}
+
+// Content
+.full_page {
+  margin: 15px;
+
+  // Column
+  .content_column {
+    background-color: #FFF;
+    padding: 10px 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+    // Textarea
+    .content_textarea {
+      font-size: $font-size;
+      font-family: $font-family;
+      line-height: $line-height;
+      width: 100%;
+      height: 750px;
+      padding: 5px;
+    }
+    //Button
+    .content_button {
+      font-size: $font-size;
+      font-family: $font-family;
+      color: #FFF;
+      background-color: #0090ff;
+      padding: 8px 15px;
+      border: 0;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+  		&:hover {
+    		background-color: #0073cc;
+    		-o-transition: background-color 0.5s ease;
+    		-moz-transition: background-color 0.5s ease;
+    		-webkit-transition: background-color 0.5s ease;
+    		transition: background-color 0.5s ease;
+   		}
+    }
+    @media screen and (max-width: 480px) {
+      .content_button {
+        width: 100%;
+        margin: 4px 0;
+      }
+    }
+    // Message
+    .message {
+      display: inline-block;
+    }
+    @media screen and (max-width: 480px) {
+      .message {
+        width: 100%;
+        text-align: center;
+      }
+    }
+    // Footer
+    footer {
+      font-size: 0.8em;
+      text-align: center;
+    }
+  }
+}
