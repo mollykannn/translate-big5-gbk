@@ -1,0 +1,135 @@
+@font-face {
+  font-family: custom-font;
+  src: local(Heiti TC), local(Microsoft JhengHei);
+  unicode-range: U+4E00-9FFF;
+} 
+
+@font-face {
+  font-family: custom-font;
+  src: local(Helvetica), local(Arial);
+  unicode-range: U+00-024F;
+}
+
+// Variable
+$font-family: custom-font;
+$font-size: 1em;
+$line-height: 1.4em;
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+// Default
+body {
+  width: 100%;
+  background-color: #f0f0f0;
+  font-family: $font-family;
+  font-size: $font-size;
+  margin: 0;
+  line-height: $line-height;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #d4d4d4;
+  margin-bottom: 10px;
+}
+
+// Margin, Linebreak
+.linebreak--5 {
+  height: 5px;
+}
+
+.linebreak--10 {
+  height: 10px;
+}
+
+// Column
+.column {
+  margin: 15px;
+  background-color: #FFF;
+  padding: 10px 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+  // Textarea
+  &--textarea {
+    font-size: $font-size;
+    font-family: $font-family;
+    line-height: $line-height;
+    width: 100%;
+    height: calc(100vh - 200px);
+    min-height: 100px;
+    padding: 5px;
+  }
+
+  // Button
+  &--button {
+    font-size: $font-size;
+    font-family: $font-family;
+    color: #FFF;
+    background-color: #0090ff;
+    padding: 8px 15px;
+    border: 0;
+    border-radius: 3px;
+    margin-right: 5px;
+		&:hover {
+  		background-color: #0073cc;
+      transition: background-color 0.5s ease;
+  		-o-transition: background-color 0.5s ease;
+  		-moz-transition: background-color 0.5s ease;
+  		-webkit-transition: background-color 0.5s ease;
+ 		}
+    @media (max-width: 480px) {
+      width: 100%;
+      margin: 4px 0;
+    }
+  }
+
+  &--tips {
+    position: relative;
+    &:before {
+      content: " ";
+      position: absolute;
+      top: -10px;
+      left: 27px;
+      width: 10px;
+      height: 10px;
+      background: linear-gradient(to right bottom,#FFF 50%, rgba(111, 111, 111,0.9) 0);
+      transform: rotate(45deg);
+    }
+    &:after {
+      content: "複製成功!!";
+      position: absolute;
+      top: -31px;
+      left: -7px;
+      font-size: 14px;
+      width: 77px;
+      height: 20px;
+      background-color: rgba(111, 111, 111,0.9);
+      padding: 3px 0;
+      border-radius: 3px;
+    }
+    @media (max-width: 480px) {
+      &:before {
+        left: 32px;
+      }
+      &:after {
+        left: 0;
+      }
+    }
+  }
+
+  // Footer
+  footer {
+    font-size: 0.8em;
+    text-align: center;
+  }
+}
