@@ -6,6 +6,10 @@ var gulp = require('gulp'),
     del        = require('del'),
     browserSync = require('browser-sync').create();
 
+var postcss = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
+var colorRgbaFallback = require("postcss-color-rgba-fallback");
+
 // Minimum js file
 gulp.task('uglify', function() {
   gulp.src('src/js/*.js')
@@ -20,8 +24,13 @@ gulp.task('uglify', function() {
 
 // Write SASS file
 gulp.task('sass', function(){
+    var processors = [
+    autoprefixer,
+    colorRgbaFallback
+  ];
   gulp.src('src/sass/*.scss')
   .pipe(sass())
+  .pipe(postcss(processors))
   .pipe(gulp.dest("src/css/"))
   .pipe(minifyCSS({
     keepBreaks: true,

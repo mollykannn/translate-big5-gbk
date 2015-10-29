@@ -10,9 +10,6 @@
 ***********************************/
 /*** 此 JS 檔經過修改 (https://github.com/mollykannn/translate-big5-gbk.git) ***/
 
-
-if (typeof(TongWen) == "undefined") var TongWen = new Object();
-
 TongWen.t_2_s = {
 "\u00af":"\u02c9",
 "\u2025":"\u00a8",
@@ -2920,23 +2917,17 @@ TongWen.t_2_s = {
 
 function toSimp(itxt){
 	var zhmap = TongWen.t_2_s;
-
-	itxt = itxt.replace(/[^\x00-\xFF]/g,  function(s){
+	itxt = itxt.replace(/[^\x00-\xFF]/g, function(s){
 			return ((s in zhmap)?zhmap[s]:s);
 		}
 	);
-	return 	itxt;
+	return itxt;
 }
 
 function convert_simp(){
 	var curDoc = document.getElementById("txtOutput");
-
-		var textnodes_length = curDoc.value.length;
-
-		for (var i=0; i <= textnodes_length; i++) {
-			curDoc.value = toSimp(curDoc.value);
-		}
-
+	var textnodes_length = curDoc.value.length;
+	for (var i=0; i <= textnodes_length; i++) {
+		curDoc.value = toSimp(curDoc.value);
+	}
 }
-
-convert_simp();

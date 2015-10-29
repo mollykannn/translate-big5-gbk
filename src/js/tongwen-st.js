@@ -2553,22 +2553,17 @@ TongWen.s_2_t = {
 
 function toTrad(itxt){
 	var zhmap = TongWen.s_2_t;
-
 	itxt = itxt.replace(/[^\x00-\xFF]/g,  function(s){
 			return ((s in zhmap)?zhmap[s]:s);
 		}
 	);
-	return 	itxt;
+	return itxt;
 }
 
 function convert_trad(){
 	var curDoc = document.getElementById("txtOutput");
-
-		var textnodes_length = curDoc.value.length;
-
-		for (var i=0; i <= textnodes_length; i++) {
-			curDoc.value = toTrad(curDoc.value);
-		}
+	var textnodes_length = curDoc.value.length;
+	for (var i=0; i <= textnodes_length; i++) {
+		curDoc.value = toTrad(curDoc.value);
+	}
 }
-
-convert_trad();
