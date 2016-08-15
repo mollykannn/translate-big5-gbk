@@ -24,5 +24,5 @@ gulp
 刪除及建立 css & js file (Delete and build the css & js file)
 
 ```shell
-gulp clean && build
+gulp clean && gulp build
 ```
