@@ -1,17 +1,16 @@
 /*******************************************
-* ¥»JSÀÉ¦s©ñ¦ì¸m¥Ñ WFU BLOG ´£¨Ñ
+* æœ¬JSæª”å­˜æ”¾ä½ç½®ç”± WFU BLOG æä¾›
 *
-* JSÀÉ¥Dµ{¦¡¥X¦Û·s¦P¤å°ó¡Ghttp://tongwen.openfoundry.org/
-* ®ø®§¨Ó·½¡Ghttp://hi.baidu.com/%CE%B5%C7%E5%D4%C2/blog/item/bf6b79d31fc49b289a5027ed.html
-* ±ı½s¿è¡B­×§ï¥»µ{¦¡¡A°O±oÀx¦sªº®æ¦¡­n¿ï unicode¡C
+* JSæª”ä¸»ç¨‹å¼å‡ºè‡ªæ–°åŒæ–‡å ‚ï¼šhttp://tongwen.openfoundry.org/
+* æ¶ˆæ¯ä¾†æºï¼šhttp://hi.baidu.com/%CE%B5%C7%E5%D4%C2/blog/item/bf6b79d31fc49b289a5027ed.html
+* æ¬²ç·¨è¼¯ã€ä¿®æ”¹æœ¬ç¨‹å¼ï¼Œè¨˜å¾—å„²å­˜çš„æ ¼å¼è¦é¸ unicodeã€‚
 *
 * WFU Blog : http://wayne-fu.blogspot.com/
 *
 ***********************************/
-/*** ¦¹ JS ÀÉ¸g¹L­×§ï (https://github.com/mollykannn/translate-big5-gbk.git) ***/
+/*** æ­¤ JS æª”ç¶“éä¿®æ”¹ (https://github.com/mollykannn/translate-big5-gbk.git) ***/
 
-var TongWen = {};
-TongWen.s_2_t = {
+var TongWen_st = {
 "\u00b7":"\u2027",
 "\u2015":"\u2500",
 "\u2016":"\u2225",
@@ -2551,19 +2550,10 @@ TongWen.s_2_t = {
 "\ue5f1":"\u3000"
 };
 
-function toTrad(itxt){
-	var zhmap = TongWen.s_2_t;
-	itxt = itxt.replace(/[^\x00-\xFF]/g,  function(s){
-			return ((s in zhmap)?zhmap[s]:s);
-		}
-	);
-	return itxt;
-}
-
 function convert_trad(){
-	var curDoc = document.getElementById("txtOutput");
-	var textnodes_length = curDoc.value.length;
-	for (var i=0; i <= textnodes_length; i++) {
-		curDoc.value = toTrad(curDoc.value);
-	}
+  var curDoc = document.getElementById("txtOutput");
+  var zhmap = TongWen_st;
+  for (var i=0; i <= curDoc.value.length; i++) {
+    curDoc.value = curDoc.value.replace(/[^\x00-\xFF]/g, function(s){ return ((s in zhmap)?zhmap[s]:s);});
+  }
 }
