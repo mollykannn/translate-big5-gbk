@@ -7,13 +7,13 @@ JS檔主程式出自:
 - [WFU BLOG](http://www.wfublog.com/2014/12/traditional-simplified-chinese-auto-switch.html)
 
 
-### 安裝 (Install)
+## 安裝 (Install)
 
 ```shell
 npm install -g gulp
 ```
 
-### 使用方法 (Usage)
+## 使用方法 (Usage)
 
 運行 (Run)
 
