@@ -10,7 +10,7 @@ JS檔主程式出自:
 ## 安裝 (Install)
 
 ```shell
-npm install -g gulp
+npm install
 ```
 
 ## 使用方法 (Usage)
