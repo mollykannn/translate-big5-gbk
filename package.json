@@ -21,15 +21,16 @@
   },
   "homepage": "https://github.com/mollykannn/translate-big5-gbk#readme",
   "devDependencies": {
-    "autoprefixer": "^6.4.0",
-    "browser-sync": "^2.14.0",
-    "del": "^2.2.2",
+    "autoprefixer": "^6.0.3",
+    "browser-sync": "^2.9.11",
+    "css-loader": "^0.24.0",
+    "del": "^2.0.2",
     "gulp": "^3.9.1",
-    "gulp-minify-css": "^1.2.4",
-    "gulp-postcss": "^6.1.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-postcss": "^6.0.1",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.2",
+    "gulp-sass": "^2.0.4",
     "gulp-uglify": "^2.0.0",
-    "postcss-color-rgba-fallback": "^2.2.0"
+    "postcss-color-rgba-fallback": "^2.0.0"
   }
 }
