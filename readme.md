@@ -1,6 +1,6 @@
 # 繁簡轉換
 
-繁簡轉換線上版 - [http://mollykannn.github.io/translate-big5-gbk/html/](http://mollykannn.github.io/translate-big5-gbk/html/)
+繁簡轉換線上版 - [https://mollykannn.github.io/translate-big5-gbk](https://mollykannn.github.io/translate-big5-gbk)
 
 JS檔主程式出自:
 - [新同文堂](http://tongwen.openfoundry.org/)
