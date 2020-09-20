@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="Molly Kan" />
+    <meta name="description" content="繁簡轉換" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <!-- Facebook -->
+    <meta property="og:title" content="繁簡轉換" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="繁簡轉換" />
+    <meta property="og:url" content="https://mollykannn.github.io/translate-big5-gbk" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="繁簡轉換" />
+    <meta name="twitter:creator" content="Molly Kan" />
+    <title>繁簡轉換</title>
+    <!-- Google Chrome color -->
+    <meta name="theme-color" content="#03a9f4" />
+  </head>
+  <body>
+    <div class="column">
+      <header>
+        <h1>繁簡轉換</h1>
+      </header>
+      <section>
+        <hr />
+        <button class="column--button" onclick="convert('traditional');">轉換為繁體</button>
+        <button class="column--button" onclick="convert('simplified');">轉換為簡體</button>
+        <button class="column--button column--copyButton" data-clipboard-target="#textOutput" title="複製成功">
+          複製
+        </button>
+        <button class="column--button" onclick="clearContent();">清除</button>
+        <div class="linebreak--20"></div>
+        <textarea class="column--textarea" id="textOutput"></textarea>
+      </section>
+      <footer>
+        Created by
+        <a href="https://github.com/mollykannn">Molly Kan</a>
+        <br />
+        <a href="http://www.wfublog.com/2014/12/traditional-simplified-chinese-auto-switch.html">tongwen (WFU Blog)</a>
+      </footer>
+    </div>
+  </body>
+</html>

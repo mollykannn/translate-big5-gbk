@@ -1,0 +1,113 @@
+// Variable
+$font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
+$font-size: 16px;
+$line-height: 1.4em;
+
+* {
+  box-sizing: border-box;
+}
+
+// Default
+body {
+  margin: 0;
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+hr {
+  height: 1px;
+  margin-bottom: 10px;
+  border: 0;
+  background-color: #d4d4d4;
+}
+
+// Margin, Linebreak
+.linebreak--20 {
+  height: 20px;
+}
+
+button {
+  outline: 0;
+}
+
+// Column
+.column {
+  padding: 20px;
+
+  // Textarea
+  &--textarea {
+    width: 100%;
+    height: calc(100vh - 215px);
+    min-height: 100px;
+    padding: 5px;
+    font-family: $font-family;
+    font-size: $font-size;
+    line-height: $line-height;
+  }
+
+  // Button
+  &--button {
+    margin-right: 5px;
+    padding: 8px 15px;
+    border: 0;
+    border-radius: 3px;
+    background-color: #03a9f4;
+    color: #fff;
+    font-family: $font-family;
+    font-size: $font-size;
+    @media (max-width: 480px) {
+      width: 100%;
+      margin: 4px 0;
+    }
+    &:hover {
+      background-color: #1eb8ff;
+      transition: background-color 0.5s ease;
+    }
+  }
+
+  &--copyButton {
+    display: inline;
+    position: relative;
+    white-space: nowrap;
+    &:active:after {
+      display: block;
+      z-index: 98;
+      position: absolute;
+      top: -35px;
+      left: 0%;
+      padding: 3px 10px;
+      border-radius: 2px;
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      font-weight: normal;
+      white-space: nowrap;
+      content: attr(title);
+    }
+
+    &:active:before {
+      display: block;
+      z-index: 99;
+      position: absolute;
+      top: -7px;
+      left: 13%;
+      border: solid;
+      border-width: 6px 6px 0 6px;
+      border-color: #111 transparent;
+      font-size: 12px;
+      content: "";
+    }
+  }
+
+  // Footer
+  footer {
+    font-size: 0.8em;
+    text-align: center;
+  }
+}
