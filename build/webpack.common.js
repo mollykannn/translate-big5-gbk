@@ -7,11 +7,12 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const commonConfig = {
   entry: {
-    main: "./src/js/index.js",
+    'js/main': "./src/js/index.js",
+    sw: "./src/sw.js",
   },
   output: {
     path: path.join(__dirname, "../dist"),
-    filename: "js/[name].js",
+    filename: "[name].js",
   },
   module: {
     rules: [

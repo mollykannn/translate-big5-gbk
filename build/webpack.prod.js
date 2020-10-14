@@ -13,20 +13,5 @@ const prodConfig = {
       },
     ],
   },
-  optimization: {
-    splitChunks: {
-      name: false,
-      cacheGroups: {
-        vendors: {
-          test: /node_modules/,
-          chunks: "initial",
-          name: "vendor",
-        },
-        commons: {
-          chunks: "all",
-        },
-      },
-    },
-  },
 };
 module.exports = merge(commomConfig, prodConfig);
