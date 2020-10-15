@@ -1,16 +1,5 @@
-import "../css/style.scss";
-import ClipboardJS from "clipboard";
 import TongWen_st from "./tongwen-st.js";
 import TongWen_ts from "./tongwen-ts.js";
-
-const clipboardButton = new ClipboardJS(".column--copyButton");
-clipboardButton.on("success", function (e) {
-  e.clearSelection();
-});
-
-window.clearContent = function () {
-  document.getElementById("textOutput").value = "";
-};
 
 window.convert = function (action) {
   let curDoc = document.getElementById("textOutput");

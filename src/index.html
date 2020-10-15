@@ -8,6 +8,12 @@
   <meta name="description" content="繁簡轉換" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <!-- favicon -->
+  <link href="/translate-big5-gbk/images/icons/favicon.ico" rel="icon" type="image/ico">
+  <link href="/translate-big5-gbk/images/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+  <link href="/translate-big5-gbk/images/icons/icon-192x192.png" rel="icon" type="image/png" sizes="192x192">
+  <link href="/translate-big5-gbk/images/icons/icon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+  <link href="/translate-big5-gbk/images/icons/icon-16x16.png" rel="icon" type="image/png" sizes="16x16">
   <!-- Facebook -->
   <meta property="og:title" content="繁簡轉換" />
   <meta property="og:type" content="website" />
@@ -20,29 +26,26 @@
   <title>繁簡轉換</title>
   <!-- Google Chrome color -->
   <meta name="theme-color" content="#03a9f4" />
+  <link rel="manifest" href="/translate-big5-gbk/manifest.json">
+
 </head>
 
 <body>
-  <div class="column">
+  <div class="container">
     <header>
       <h1>繁簡轉換</h1>
     </header>
+    <hr />
     <section>
-      <hr />
-      <button class="column--button" onclick="convert('traditional');">轉換為繁體</button>
-      <button class="column--button" onclick="convert('simplified');">轉換為簡體</button>
-      <button class="column--button column--copyButton" data-clipboard-target="#textOutput" title="複製成功">
-        複製
-      </button>
-      <button class="column--button" onclick="clearContent();">清除</button>
-      <div class="linebreak--20"></div>
-      <textarea class="column--textarea" id="textOutput"></textarea>
+      <div class="convertColumn">
+        <button class="button" onclick="convert('traditional');">轉換為繁體</button>
+        <button class="button" onclick="convert('simplified');">轉換為簡體</button>
+      </div>
+      <textarea class="textarea" id="textOutput"></textarea>
     </section>
     <footer>
-      Created by
-      <a href="https://github.com/mollykannn">Molly Kan</a>
-      <br />
-      <a href="http://www.wfublog.com/2014/12/traditional-simplified-chinese-auto-switch.html">tongwen (WFU Blog)</a>
+      Created by <a href="https://github.com/mollykannn">Molly Kan</a> / Reference from <a href="http://www.wfublog.com/2014/12/traditional-simplified-chinese-auto-switch.html">tongwen (WFU Blog)</a><br/>
+      Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
     </footer>
   </div>
   <script>
