@@ -4,7 +4,7 @@
   "description": "繁簡轉換",
   "lang": "zh-Hans-HK",
   "background_color": "#fff",
-  "theme_color": "#0d6efd",
+  "theme_color": "#0079d2",
   "dir": "ltr",
   "display": "standalone",
   "orientation": "portrait",
