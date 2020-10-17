@@ -58,7 +58,7 @@ hr {
     margin: 0 0.5rem;
     padding: 0.7rem 2rem;
     border: 0;
-    background-color: #0d6efd;
+    background-color: #0079d2;
     color: #fff;
     @media (max-width: 480px) {
       flex: 1;
@@ -70,7 +70,7 @@ hr {
       margin-right: 0;
     }
     &:hover {
-      background-color: #025ce2;
+      background-color: #0064ad;
       transition: background-color 0.5s ease;
     }
   }
