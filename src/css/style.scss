@@ -34,10 +34,6 @@ hr {
   background-color: #d4d4d4;
 }
 
-button {
-  outline: 0;
-}
-
 // Column
 .container {
   padding: 20px 15px 10px;
@@ -58,10 +54,11 @@ button {
   }
   // Button
   & .button {
+    outline: none;
     margin: 0 0.5rem;
     padding: 0.7rem 2rem;
     border: 0;
-    background-color: #03a9f4;
+    background-color: #0d6efd;
     color: #fff;
     @media (max-width: 480px) {
       flex: 1;
@@ -73,13 +70,13 @@ button {
       margin-right: 0;
     }
     &:hover {
-      background-color: #1eb8ff;
+      background-color: #025ce2;
       transition: background-color 0.5s ease;
     }
   }
 
   // Footer
-  footer {
+  .footer {
     font-size: 85%;
     text-align: center;
   }

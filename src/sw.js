@@ -3,14 +3,13 @@ var APP_PREFIX = 'translate-big5-gbk'
 var VERSION = '1.0.2'
 var CACHE_NAME = APP_PREFIX + VERSION
 var URLS = [
-  '/translate-big5-gbk/',
-  '/translate-big5-gbk/js/main.js',
-  '/translate-big5-gbk/css/main.css',
+  'index.html',
+  'js/main.js',
+  'css/main.css',
 ]
 
 // Respond with cached resources
 self.addEventListener('fetch', function (e) {
-  console.log('fetch request : ' + e.request.url)
   e.respondWith(
     caches.match(e.request).then(function (request) {
       if (request) {

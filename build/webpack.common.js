@@ -5,10 +5,11 @@ const PurgecssPlugin = require("purgecss-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
 
 const commonConfig = {
   entry: {
-    main: ["./src/js/index.js", "./src/css/style.scss"]
+    main: ["./src/js/index.js", "./src/css/style.scss"],
   },
   output: {
     path: path.join(__dirname, "../dist"),
@@ -71,6 +72,10 @@ const commonConfig = {
         collapseWhitespace: true,
         removeAttributeQuotes: true,
       },
+    }),
+    new ScriptExtHtmlWebpackPlugin({
+      sync: "main.css",
+      defaultAttribute: "async",
     }),
     new CopyPlugin({
       patterns: [
