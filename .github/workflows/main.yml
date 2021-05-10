@@ -22,3 +22,13 @@ jobs:
         BRANCH: gh-pages
         FOLDER: dist
         CLEAN: true
+
+  merge-me:
+    name: Merge me!
+    runs-on: ubuntu-latest
+    steps:
+      - if: ${{ github.event.workflow_run.conclusion == 'success' }}
+        name: Merge me!
+        uses: ridedott/merge-me-action@v2
+        with:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
