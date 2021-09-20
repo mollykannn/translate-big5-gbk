@@ -21,7 +21,7 @@
     "html-webpack-plugin": "^4.4.1",
     "image-webpack-loader": "^7.0.1",
     "mini-css-extract-plugin": "^0.11.2",
-    "node-sass": "^4.14.1",
+    "node-sass": "^6.0.1",
     "postcss-loader": "^4.0.2",
     "purgecss-webpack-plugin": "^2.3.0",
     "sass-loader": "^10.0.2",
