@@ -6,11 +6,11 @@ on:
 jobs:
   merge-me:
     name: Auto Merge
-    if: github.actor == 'dependabot[bot]'
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - name: Auto Merge
-        uses: ahmadnassri/action-dependabot-auto-merge@v2
+        uses: ridedott/merge-me-action@v2.9.27
         with:
-          target: minor
-          github-token: ${{ secrets.ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PRESET: DEPENDABOT_MINOR
