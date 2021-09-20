@@ -12,5 +12,5 @@ jobs:
       - name: Auto Merge
         uses: ridedott/merge-me-action@v2.9.27
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           PRESET: DEPENDABOT_MINOR
