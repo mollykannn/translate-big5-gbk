@@ -1,10 +1,14 @@
 name: Build and Deploy
 
 on:
+  workflow_run:
+    types:
+      - completed
+    workflows:
+      - 'Auto Merge'
   push:
     branches:
       - master
-  pull_request:
 
 jobs:
   build-and-deploy:
