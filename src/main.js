@@ -1,5 +1,14 @@
-import TongWen_st from "./tongwen-st.js";
-import TongWen_ts from "./tongwen-ts.js";
+import '/src/css/style.scss'
+import TongWen_st from "/src/js/tongwen-st.js";
+import TongWen_ts from "/src/js/tongwen-ts.js";
+import { registerSW } from 'virtual:pwa-register'
+
+const updateSW = registerSW({
+  onNeedRefresh () {},
+  onOfflineReady () {}
+})
+
+updateSW()
 
 window.convert = function (action) {
   let curDoc = document.getElementById("textOutput");

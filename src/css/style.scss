@@ -1,12 +1,9 @@
-// Variable
-
-*, *::before, *::after { 
-  font: inherit;
-	margin: 0; padding: 0; 
-}
-
-*, *:before, *:after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -16,14 +13,14 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "sans-serif";;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "sans-serif";
   font-size: 1.5rem;
   line-height: 1.7;
 }
 
 h1 {
-  font-size: 2.5rem;
   margin-bottom: 1rem;
+  font-size: 2.5rem;
   font-weight: normal;
 }
 
@@ -45,33 +42,37 @@ hr {
   // Textarea
   & .textarea {
     width: 100%;
-    margin-top: 1.5rem;
     height: calc(100vh - 205px);
     min-height: 100px;
+    margin-top: 1.5rem;
     padding: 0.3rem 0.7rem;
-    outline: none;
     border: 1px solid #a9a9a9;
+    outline: none;
   }
   // Button
   & .button {
-    outline: none;
     margin: 0 0.5rem;
     padding: 0.7rem 2rem;
     border: 0;
+    outline: none;
     background-color: #0079d2;
     color: #fff;
+
     @media (max-width: 480px) {
       flex: 1;
     }
+
     &:first-child {
       margin-left: 0;
     }
+
     &:last-child {
       margin-right: 0;
     }
+
     &:hover {
-      background-color: #0064ad;
       transition: background-color 0.5s ease;
+      background-color: #0064ad;
     }
   }
 

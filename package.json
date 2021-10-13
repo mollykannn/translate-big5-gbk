@@ -1,36 +1,24 @@
 {
   "name": "translate-big5-gbk",
-  "version": "1.0.2",
-  "main": "index.js",
+  "version": "1.0.3",
   "author": "Molly Kan",
   "license": "MIT",
   "homepage": "http://mollykannn.github.io/translate-big5-gbk",
   "scripts": {
-    "build": "webpack --config ./build/webpack.prod.js",
-    "dev": "webpack-dev-server --config ./build/webpack.dev.js"
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.8",
-    "autoprefixer": "^9.8.8",
-    "babel-loader": "^8.1.0",
-    "clean-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^6.2.1",
-    "css-loader": "^4.3.0",
-    "file-loader": "^6.1.0",
-    "html-loader": "^1.3.0",
-    "html-webpack-plugin": "^4.4.1",
-    "image-webpack-loader": "^8.0.1",
-    "mini-css-extract-plugin": "^0.11.2",
-    "node-sass": "^4.14.1",
-    "postcss-loader": "^4.0.2",
-    "purgecss-webpack-plugin": "^2.3.0",
-    "sass-loader": "^12.2.0",
-    "script-ext-html-webpack-plugin": "^2.1.4",
-    "url-loader": "^4.1.0",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^4.9.0",
-    "webpack-dev-server": "^4.3.1",
-    "webpack-merge": "^5.1.4"
-  },
-  "dependencies": {}
+    "@amatlash/vite-plugin-stylelint": "^1.1.1",
+    "sass": "^1.42.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-property-sort-order-smacss": "^7.1.0",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.21.0",
+    "vite": "^2.6.4",
+    "vite-plugin-pwa": "^0.11.3",
+    "workbox-window": "^6.3.0"
+  }
 }
