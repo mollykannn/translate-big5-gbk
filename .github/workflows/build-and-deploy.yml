@@ -8,7 +8,7 @@ on:
       - 'Auto Merge'
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build-and-deploy:
