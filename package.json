@@ -10,7 +10,7 @@
     "serve": "vite preview"
   },
   "devDependencies": {
-    "@amatlash/vite-plugin-stylelint": "^1.1.1",
+    "@amatlash/vite-plugin-stylelint": "^1.2.0",
     "sass": "^1.42.1",
     "stylelint": "^14.1.0",
     "stylelint-config-property-sort-order-smacss": "^8.0.0",
