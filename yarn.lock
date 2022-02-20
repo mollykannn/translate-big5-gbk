@@ -1293,10 +1293,10 @@ css-functions-list@^3.0.0:
   resolved "https://registry.yarnpkg.com/css-functions-list/-/css-functions-list-3.0.0.tgz#faa770a0666aea11435efc0889935336cea564be"
   integrity sha512-rfwhBOvXVFcKrSwmLxD8JQyuEEy/3g3Y9FMI2l6iV558Coeo1ucXypXb4rwrVpk5Osh5ViXp2DTgafw8WxglhQ==
 
-css-property-sort-order-smacss@~2.1.3:
-  version "2.1.3"
-  resolved "https://registry.yarnpkg.com/css-property-sort-order-smacss/-/css-property-sort-order-smacss-2.1.3.tgz#b9cf1753b3612ee7d18fe99224f483353ea38e53"
-  integrity sha512-tMGlBxcfQq5VYmMFp4tGqxkNeXDBmlGbyuuz1FFGRvCUj9CvocShe23d4kFyfxW6JMlhlBVfnZRa8AO8kgceJA==
+css-property-sort-order-smacss@~2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/css-property-sort-order-smacss/-/css-property-sort-order-smacss-2.2.0.tgz#c2cb4741e5580fe2f6d968ccde0946e8b689033c"
+  integrity sha512-nXutswsivIEBOrPo/OZw2KQjFPLvtg68aovJf6Kqrm3L6FmTvvFPaeDrk83hh0+pRJGuP3PeKJwMS0E6DFipdQ==
 
 cssesc@^3.0.0:
   version "3.0.0"
@@ -2828,12 +2828,12 @@ style-search@^0.1.0:
   resolved "https://registry.yarnpkg.com/style-search/-/style-search-0.1.0.tgz#7958c793e47e32e07d2b5cafe5c0bf8e12e77902"
   integrity sha1-eVjHk+R+MuB9K1yv5cC/jhLneQI=
 
-stylelint-config-property-sort-order-smacss@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/stylelint-config-property-sort-order-smacss/-/stylelint-config-property-sort-order-smacss-8.0.0.tgz#6e9415baba015a82eab786f3b0462666a4ea1f3c"
-  integrity sha512-tuHNU/PJ6SYvQCaBbv/mhtBh79yHtzc7M3y5oTck3Pgm3hk+K7Jkr6i4/PB7m5Rodle9wQ0oEPLF5psF/t+7wQ==
+stylelint-config-property-sort-order-smacss@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/stylelint-config-property-sort-order-smacss/-/stylelint-config-property-sort-order-smacss-9.0.0.tgz#2916751f0bf8793d3735429900599b44fdb9d785"
+  integrity sha512-jQ1miJ6uQA+n6UkunhdhBmjFd5XCe/X7l9/yBI2KGdU+8+nYt1/7slHeLvsT7SCYByYqaLt9fUUCCOjyXH6PCw==
   dependencies:
-    css-property-sort-order-smacss "~2.1.3"
+    css-property-sort-order-smacss "~2.2.0"
     stylelint-order "^5.0.0"
 
 stylelint-config-recommended@^6.0.0:
