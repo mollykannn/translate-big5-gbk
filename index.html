@@ -1,54 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="author" content="Molly Kan" />
-    <meta name="description" content="繁簡轉換" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <!-- favicon -->
-    <link href="/translate-big5-gbk/img/icons/favicon.ico" rel="icon" type="image/ico">
-    <link href="/translate-big5-gbk/img/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
-    <link href="/translate-big5-gbk/img/icons/android-chrome-192x192.png" rel="icon" type="image/png" sizes="192x192">
-    <link href="/translate-big5-gbk/img/icons/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
-    <link href="/translate-big5-gbk/img/icons/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
-    <!-- Facebook -->
-    <meta property="og:title" content="繁簡轉換" />
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content="繁簡轉換" />
-    <meta property="og:url" content="https://mollykannn.github.io/translate-big5-gbk" />
-    <meta property="og:image" content="https://mollykannn.github.io/translate-big5-gbk/img/icons/og-image.jpg" />
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="繁簡轉換" />
-    <meta name="twitter:creator" content="@MollyKannn" />
-    <meta name="twitter:image" content="https://mollykannn.github.io/translate-big5-gbk/img/icons/og-image.jpg" />
-    <title>繁簡轉換</title>
-    <!-- Google Chrome color -->
-    <meta name="theme-color" content="#0079d2" />
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <h1>繁簡轉換</h1>
-      </header>
-      <hr />
-      <section>
-        <div class="convertColumn">
-          <button class="button" onclick="convert('traditional');">轉換為繁體</button>
-          <button class="button" onclick="convert('simplified');">轉換為簡體</button>
-        </div>
-        <textarea class="textarea" id="textOutput"></textarea>
-      </section>
-      <footer class="footer">
-        Created by <a href="https://github.com/mollykannn">Molly Kan</a> / Reference from <a
-          href="http://www.wfublog.com/2014/12/traditional-simplified-chinese-auto-switch.html">tongwen (WFU
-          Blog)</a><br />
-        Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a
-          href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
-      </footer>
-    </div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<html lang="zh-Hant-hk">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="author" content="Molly Kan" />
+  <meta name="description" content="繁簡轉換" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <!-- favicon -->
+  <link href="/translate-big5-gbk/img/icons/favicon.ico" rel="icon" type="image/ico">
+  <link href="/translate-big5-gbk/img/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+  <link href="/translate-big5-gbk/img/icons/android-chrome-192x192.png" rel="icon" type="image/png" sizes="192x192">
+  <link href="/translate-big5-gbk/img/icons/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+  <link href="/translate-big5-gbk/img/icons/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+  <!-- Facebook -->
+  <meta property="og:title" content="繁簡轉換" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="繁簡轉換" />
+  <meta property="og:url" content="https://mollykannn.github.io/translate-big5-gbk" />
+  <meta property="og:image" content="https://mollykannn.github.io/translate-big5-gbk/img/icons/og-image.jpg" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="繁簡轉換" />
+  <meta name="twitter:creator" content="@MollyKannn" />
+  <meta name="twitter:image" content="https://mollykannn.github.io/translate-big5-gbk/img/icons/og-image.jpg" />
+  <title>繁簡轉換</title>
+  <!-- Google Chrome color -->
+  <meta name="theme-color" content="#0079d2" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>繁簡轉換</h1>
+    </header>
+    <hr />
+    <section>
+      <div class="button-column">
+        <button class="button" onclick="convert('s2t');">轉換為繁體</button>
+        <button class="button" onclick="convert('t2s');">轉換為簡體</button>
+      </div>
+      <textarea class="textarea" id="textOutput"></textarea>
+    </section>
+    <footer class="footer">
+      Created by <a href="https://github.com/mollykannn">Molly Kan</a> / Reference from
+      <a href="https://github.com/tongwentang/tongwen-dict/">tongwen-dict</a><br />
+      Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from
+      <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+    </footer>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>

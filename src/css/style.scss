@@ -15,7 +15,18 @@ html {
 body,
 button,
 textarea {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.7;
@@ -34,49 +45,48 @@ hr {
   background-color: #d4d4d4;
 }
 
-// Column
 .container {
-  padding: 20px 15px 10px;
+  padding: 2rem 1.5rem 1rem;
 
-  .convertColumn {
+  .button-column {
     display: flex;
+    // Button
+    .button {
+      margin: 0 0.5rem;
+      padding: 0.7rem 2rem;
+      border: 0;
+      outline: none;
+      background-color: #0079d2;
+      color: #fff;
+
+      @media (max-width: 480px) {
+        flex: 1;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        transition: background-color 0.5s ease;
+        background-color: #0064ad;
+      }
+    }
   }
 
   // Textarea
-  & .textarea {
+  .textarea {
     width: 100%;
-    height: calc(100vh - 205px);
-    min-height: 100px;
+    height: calc(100vh - 20.5rem);
+    min-height: 10rem;
     margin-top: 1.5rem;
     padding: 0.3rem 0.7rem;
-    border: 1px solid #a9a9a9;
+    border: 0.1rem solid #a9a9a9;
     outline: none;
-  }
-  // Button
-  & .button {
-    margin: 0 0.5rem;
-    padding: 0.7rem 2rem;
-    border: 0;
-    outline: none;
-    background-color: #0079d2;
-    color: #fff;
-
-    @media (max-width: 480px) {
-      flex: 1;
-    }
-
-    &:first-child {
-      margin-left: 0;
-    }
-
-    &:last-child {
-      margin-right: 0;
-    }
-
-    &:hover {
-      transition: background-color 0.5s ease;
-      background-color: #0064ad;
-    }
   }
 
   // Footer

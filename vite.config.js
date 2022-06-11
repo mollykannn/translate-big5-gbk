@@ -1,14 +1,11 @@
 import { defineConfig } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
-import viteStylelint from '@amatlash/vite-plugin-stylelint'
+import StylelintPlugin from 'vite-plugin-stylelint';
 
 export default defineConfig({
-  build: {
-    sourcemap: process.env.SOURCE_MAP === 'true'
-  },
   base: '/translate-big5-gbk',
   plugins: [
-    viteStylelint(),
+    StylelintPlugin(),
     VitePWA({
       mode: 'development',
       srcDir: 'src',
