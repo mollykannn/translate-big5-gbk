@@ -3126,10 +3126,10 @@ vite-plugin-pwa@^0.12.0:
     workbox-build "^6.5.3"
     workbox-window "^6.5.3"
 
-vite-plugin-stylelint@^2.2.3:
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/vite-plugin-stylelint/-/vite-plugin-stylelint-2.2.3.tgz#aa5f75114a32f93834cc1c15815f49dcdbfe4c7c"
-  integrity sha512-tlbXu29+1NmNtCkNFbvi+rF3pcjPg5o8y/oJ2SjM4tM/U7YQav2CSmwIr8BYNgs65pmhQ4ozX9QYu5dBxm4C1g==
+vite-plugin-stylelint@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/vite-plugin-stylelint/-/vite-plugin-stylelint-2.3.0.tgz#d2da35ff2b40969638a87038e2f6e87307791fbf"
+  integrity sha512-wBc6woZI1X1Bv2fOmVLMW2JUPCowVt5ML73W9evU/vhKReZJYoyT8l8MzeFShdiYDd5A30S6Pf0+gSE623qYLA==
   dependencies:
     "@rollup/pluginutils" "^4.2.1"
 
