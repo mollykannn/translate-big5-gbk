@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/translate-big5-gbk/sw.js', { scope: '/translate-big5-gbk/' })})}
