@@ -1,7 +1,7 @@
 define(['exports'], (function (exports) { 'use strict';
 
     try {
-      self['workbox:core:6.5.2'] && _();
+      self['workbox:core:6.5.3'] && _();
     } catch (e) {}
 
     /*
@@ -514,7 +514,7 @@ define(['exports'], (function (exports) { 'use strict';
     };
 
     try {
-      self['workbox:routing:6.5.2'] && _();
+      self['workbox:routing:6.5.3'] && _();
     } catch (e) {}
 
     /*
@@ -1398,7 +1398,7 @@ define(['exports'], (function (exports) { 'use strict';
     }
 
     try {
-      self['workbox:precaching:6.5.2'] && _();
+      self['workbox:precaching:6.5.3'] && _();
     } catch (e) {}
 
     /*
@@ -1901,7 +1901,7 @@ define(['exports'], (function (exports) { 'use strict';
     }
 
     try {
-      self['workbox:strategies:6.5.2'] && _();
+      self['workbox:strategies:6.5.3'] && _();
     } catch (e) {}
 
     /*
@@ -2818,16 +2818,20 @@ define(['exports'], (function (exports) { 'use strict';
 
           const integrityInManifest = params.integrity;
           const integrityInRequest = request.integrity;
-          const noIntegrityConflict = !integrityInRequest || integrityInRequest === integrityInManifest;
+          const noIntegrityConflict = !integrityInRequest || integrityInRequest === integrityInManifest; // Do not add integrity if the original request is no-cors
+          // See https://github.com/GoogleChrome/workbox/issues/3096
+
           response = await handler.fetch(new Request(request, {
-            integrity: integrityInRequest || integrityInManifest
+            integrity: request.mode !== 'no-cors' ? integrityInRequest || integrityInManifest : undefined
           })); // It's only "safe" to repair the cache if we're using SRI to guarantee
           // that the response matches the precache manifest's expectations,
           // and there's either a) no integrity property in the incoming request
           // or b) there is an integrity, and it matches the precache manifest.
           // See https://github.com/GoogleChrome/workbox/issues/2858
+          // Also if the original request users no-cors we don't use integrity.
+          // See https://github.com/GoogleChrome/workbox/issues/3096
 
-          if (integrityInManifest && noIntegrityConflict) {
+          if (integrityInManifest && noIntegrityConflict && request.mode !== 'no-cors') {
             this._useDefaultCacheabilityPluginIfNeeded();
 
             const wasCached = await handler.cachePut(request, response.clone());
@@ -3657,6 +3661,11 @@ define(['exports'], (function (exports) { 'use strict';
        * and [`search`]{@link https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/search}
        * portions of the requested URL.
        *
+       * *Note*: These RegExps may be evaluated against every destination URL during
+       * a navigation. Avoid using
+       * [complex RegExps](https://github.com/GoogleChrome/workbox/issues/3077),
+       * or else your users may see delays when navigating your site.
+       *
        * @param {workbox-routing~handlerCallback} handler A callback
        * function that returns a Promise resulting in a Response.
        * @param {Object} options
@@ -3776,4 +3785,4 @@ define(['exports'], (function (exports) { 'use strict';
     exports.registerRoute = registerRoute;
 
 }));
-//# sourceMappingURL=workbox-1027f43f.js.map
+//# sourceMappingURL=workbox-3589c0c5.js.map
