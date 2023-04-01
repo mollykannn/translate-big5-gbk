@@ -16,7 +16,7 @@
     "stylelint-config-property-sort-order-smacss": "^9.1.0",
     "stylelint-config-standard": "^31.0.0",
     "stylelint-order": "^6.0.3",
-    "stylelint-scss": "^4.4.0",
+    "stylelint-scss": "^4.6.0",
     "vite": "^4.2.1",
     "vite-plugin-pwa": "^0.14.7",
     "vite-plugin-stylelint": "^4.3.0"
