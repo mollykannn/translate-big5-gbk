@@ -19,7 +19,7 @@
     "stylelint-scss": "^5.0.1",
     "vite": "^4.4.9",
     "vite-plugin-pwa": "^0.16.4",
-    "vite-plugin-stylelint": "^4.3.0"
+    "vite-plugin-stylelint": "^5.1.1"
   },
   "dependencies": {}
 }
