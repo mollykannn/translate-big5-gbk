@@ -10,7 +10,7 @@
     "preview": "vite preview --port 8888 --host"
   },
   "devDependencies": {
-    "postcss-scss": "^4.0.7",
+    "postcss-scss": "^4.0.9",
     "sass": "^1.66.1",
     "stylelint": "^15.10.3",
     "stylelint-config-property-sort-order-smacss": "^9.1.0",
