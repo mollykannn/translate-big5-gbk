@@ -3288,10 +3288,10 @@ vite-plugin-pwa@^0.17.2:
     workbox-build "^7.0.0"
     workbox-window "^7.0.0"
 
-vite-plugin-stylelint@^5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/vite-plugin-stylelint/-/vite-plugin-stylelint-5.2.0.tgz#e877ca37c6791fb0cdc5ec8b08f27fdf0b20fda9"
-  integrity sha512-Qv5i7v3DqtICuAGApkHAjf0KfUESp6U47W8LcMVZLywiaE4iT9bH8SMdzhaklJ21ejKl8satnj6znbvr8xJ23Q==
+vite-plugin-stylelint@^5.2.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/vite-plugin-stylelint/-/vite-plugin-stylelint-5.2.1.tgz#fb08b088e95bfc9bed443df2af2a73ee90e1b904"
+  integrity sha512-W2QKrgUdFN1pR/6qJnzgeI5q72IRaEzI7Ejvf/3+cJ7tQNkutM99gJcI7gyV5HdYiKnVFu7jBFQq3FwB2tS0pw==
   dependencies:
     "@rollup/pluginutils" "^5.0.5"
     chokidar "^3.5.3"
