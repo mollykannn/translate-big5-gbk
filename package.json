@@ -13,7 +13,7 @@
     "postcss-scss": "^4.0.9",
     "sass": "^1.69.5",
     "stylelint": "^15.11.0",
-    "stylelint-config-property-sort-order-smacss": "^9.1.0",
+    "stylelint-config-property-sort-order-smacss": "^10.0.0",
     "stylelint-config-standard": "^34.0.0",
     "stylelint-order": "^6.0.3",
     "stylelint-scss": "^5.3.1",
