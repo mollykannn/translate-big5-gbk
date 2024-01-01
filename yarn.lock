@@ -1228,10 +1228,10 @@
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
 
-"@rollup/pluginutils@^5.0.5":
-  version "5.0.5"
-  resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-5.0.5.tgz#bbb4c175e19ebfeeb8c132c2eea0ecb89941a66c"
-  integrity sha512-6aEYR910NyP73oHiJglti74iRyOwgFU4x3meH/H8OJx6Ry0j6cOVZ5X/wTvub7G7Ao6qaHBEaNsV3GLJkSsF+Q==
+"@rollup/pluginutils@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-5.1.0.tgz#7e53eddc8c7f483a4ad0b94afb1f7f5fd3c771e0"
+  integrity sha512-XTIWOPPcpvyKI6L1NHo0lFlCyznUEyPmPY1mc3KpPVDYulHSTvyeLNVW00QTLIAFNhR3kYnJTQHeGqU4M3n09g==
   dependencies:
     "@types/estree" "^1.0.0"
     estree-walker "^2.0.2"
@@ -3302,12 +3302,12 @@ vite-plugin-pwa@^0.17.4:
     workbox-build "^7.0.0"
     workbox-window "^7.0.0"
 
-vite-plugin-stylelint@^5.2.1:
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/vite-plugin-stylelint/-/vite-plugin-stylelint-5.2.1.tgz#fb08b088e95bfc9bed443df2af2a73ee90e1b904"
-  integrity sha512-W2QKrgUdFN1pR/6qJnzgeI5q72IRaEzI7Ejvf/3+cJ7tQNkutM99gJcI7gyV5HdYiKnVFu7jBFQq3FwB2tS0pw==
+vite-plugin-stylelint@^5.3.1:
+  version "5.3.1"
+  resolved "https://registry.yarnpkg.com/vite-plugin-stylelint/-/vite-plugin-stylelint-5.3.1.tgz#1e9e3ab42217cc79e50914158626c617e2115a64"
+  integrity sha512-M/hSdfOwnOVghbJDeuuYIU2xO/MMukYR8QcEyNKFPG8ro1L+DlTdViix2B2d/FvAw14WPX88ckA5A7NvUjJz8w==
   dependencies:
-    "@rollup/pluginutils" "^5.0.5"
+    "@rollup/pluginutils" "^5.1.0"
     chokidar "^3.5.3"
     debug "^4.3.4"
 
