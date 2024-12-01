@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "postcss-scss": "^4.0.9",
-    "sass": "^1.80.5",
+    "sass": "^1.81.0",
     "stylelint": "^15.11.0",
     "stylelint-config-property-sort-order-smacss": "^10.0.0",
     "stylelint-config-standard": "^34.0.0",
