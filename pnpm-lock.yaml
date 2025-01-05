@@ -14,6 +14,12 @@ importers:
       vite-plugin-pwa:
         specifier: ^0.21.1
         version: 0.21.1(vite@6.0.7(sass@1.83.1)(terser@5.37.0))(workbox-build@7.3.0)(workbox-window@7.3.0)
+      workbox-precaching:
+        specifier: ^7.3.0
+        version: 7.3.0
+      workbox-window:
+        specifier: ^7.3.0
+        version: 7.3.0
 
 packages:
 
