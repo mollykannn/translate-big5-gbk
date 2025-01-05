@@ -9,19 +9,19 @@
 ## 安裝 (Install)
 
 ```shell
-yarn install
+pnpm install
 ```
 
 ## 使用方法 (Usage)
 
 建立檔案 (Create files)
 ```shell
-yarn build
+pnpm build
 ```
 
 運行 (Run)
 ```shell
-yarn dev
+pnpm dev
 ```
 
 Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>

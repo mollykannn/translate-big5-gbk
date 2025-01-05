@@ -1,11 +1,9 @@
 import { defineConfig } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
-import StylelintPlugin from "vite-plugin-stylelint";
 
 export default defineConfig({
   base: "/translate-big5-gbk",
   plugins: [
-    StylelintPlugin(),
     VitePWA({
       workbox: {
         sourcemap: true,
