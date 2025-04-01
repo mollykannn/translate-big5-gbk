@@ -106,7 +106,7 @@ define(['./workbox-86c9b217'], (function (workbox) { 'use strict';
     "revision": "d14ef37d0ccab9ceceda61bb84e2cab9"
   }, {
     "url": "manifest.webmanifest",
-    "revision": "05d000680f012dc46e4c542e1022498e"
+    "revision": "c2cfd253b233c70934ebcbbcf447f04e"
   }], {});
   workbox.cleanupOutdatedCaches();
   workbox.registerRoute(new workbox.NavigationRoute(workbox.createHandlerBoundToURL("index.html")));
