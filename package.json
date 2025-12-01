@@ -10,7 +10,7 @@
     "preview": "vite preview --port 8888 --host"
   },
   "devDependencies": {
-    "vite": "^7.1.12",
+    "vite": "^7.2.4",
     "vite-plugin-pwa": "^1.1.0",
     "workbox-window": "^7.3.0",
     "workbox-precaching": "^7.3.0"
