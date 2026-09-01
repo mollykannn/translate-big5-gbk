@@ -67,28 +67,27 @@ if (!self.define) {
     });
   };
 }
-define(['./workbox-86c9b217'], (function (workbox) { 'use strict';
+define(['./workbox-7e5eb42b'], (function (workbox) { 'use strict';
 
   self.skipWaiting();
   workbox.clientsClaim();
-
   /**
    * The precacheAndRoute() method efficiently caches and responds to
    * requests for URLs in the manifest.
    * See https://goo.gl/S9QRab
    */
   workbox.precacheAndRoute([{
-    "url": "assets/index-BLRLoftj.js",
-    "revision": null
-  }, {
-    "url": "assets/index-DJY5uU5g.css",
-    "revision": null
+    "url": "registerSW.js",
+    "revision": "d692813a4e6d08a0e5b6394c4f729574"
   }, {
     "url": "index.html",
     "revision": "848120d2ecdbb037f71e8de7ca854a32"
   }, {
-    "url": "registerSW.js",
-    "revision": "d692813a4e6d08a0e5b6394c4f729574"
+    "url": "assets/index-DJY5uU5g.css",
+    "revision": null
+  }, {
+    "url": "assets/index-BLRLoftj.js",
+    "revision": null
   }, {
     "url": "robots.txt",
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca"
@@ -112,4 +111,5 @@ define(['./workbox-86c9b217'], (function (workbox) { 'use strict';
   workbox.registerRoute(new workbox.NavigationRoute(workbox.createHandlerBoundToURL("index.html")));
 
 }));
+//# sourceMappingURL=sw.js.map
 //# sourceMappingURL=sw.js.map

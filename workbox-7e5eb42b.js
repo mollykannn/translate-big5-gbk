@@ -2,7 +2,7 @@ define(['exports'], (function (exports) { 'use strict';
 
     // @ts-ignore
     try {
-      self['workbox:core:7.2.0'] && _();
+      self['workbox:core:7.4.0'] && _();
     } catch (e) {}
 
     /*
@@ -472,7 +472,7 @@ define(['exports'], (function (exports) { 'use strict';
 
     // @ts-ignore
     try {
-      self['workbox:routing:7.2.0'] && _();
+      self['workbox:routing:7.4.0'] && _();
     } catch (e) {}
 
     /*
@@ -1269,7 +1269,7 @@ define(['exports'], (function (exports) { 'use strict';
 
     // @ts-ignore
     try {
-      self['workbox:precaching:7.2.0'] && _();
+      self['workbox:precaching:7.4.0'] && _();
     } catch (e) {}
 
     /*
@@ -1573,7 +1573,7 @@ define(['exports'], (function (exports) { 'use strict';
         statusText: clonedResponse.statusText
       };
       // Apply any user modifications.
-      const modifiedResponseInit = modifier ? modifier(responseInit) : responseInit;
+      const modifiedResponseInit = responseInit;
       // Create the new response from the body stream and `ResponseInit`
       // modifications. Note: not all browsers support the Response.body stream,
       // so fall back to reading the entire body into memory as a blob.
@@ -1714,7 +1714,7 @@ define(['exports'], (function (exports) { 'use strict';
 
     // @ts-ignore
     try {
-      self['workbox:strategies:7.2.0'] && _();
+      self['workbox:strategies:7.4.0'] && _();
     } catch (e) {}
 
     /*
@@ -1728,7 +1728,7 @@ define(['exports'], (function (exports) { 'use strict';
       return typeof input === 'string' ? new Request(input) : input;
     }
     /**
-     * A class created every time a Strategy instance instance calls
+     * A class created every time a Strategy instance calls
      * {@link workbox-strategies.Strategy~handle} or
      * {@link workbox-strategies.Strategy~handleAll} that wraps all fetch and
      * cache actions around plugin callbacks and keeps track of when the strategy
@@ -2132,7 +2132,7 @@ define(['exports'], (function (exports) { 'use strict';
       /**
        * Adds a promise to the
        * [extend lifetime promises]{@link https://w3c.github.io/ServiceWorker/#extendableevent-extend-lifetime-promises}
-       * of the event event associated with the request being handled (usually a
+       * of the event associated with the request being handled (usually a
        * `FetchEvent`).
        *
        * Note: you can await
@@ -2153,13 +2153,17 @@ define(['exports'], (function (exports) { 'use strict';
        *
        * Note: any work done after `doneWaiting()` settles should be manually
        * passed to an event's `waitUntil()` method (not this handler's
-       * `waitUntil()` method), otherwise the service worker thread my be killed
+       * `waitUntil()` method), otherwise the service worker thread may be killed
        * prior to your work completing.
        */
       async doneWaiting() {
-        let promise;
-        while (promise = this._extendLifetimePromises.shift()) {
-          await promise;
+        while (this._extendLifetimePromises.length) {
+          const promises = this._extendLifetimePromises.splice(0);
+          const result = await Promise.allSettled(promises);
+          const firstRejection = result.find(i => i.status === 'rejected');
+          if (firstRejection) {
+            throw firstRejection.reason;
+          }
         }
       }
       /**
@@ -3389,4 +3393,5 @@ define(['exports'], (function (exports) { 'use strict';
     exports.registerRoute = registerRoute;
 
 }));
-//# sourceMappingURL=workbox-86c9b217.js.map
+//# sourceMappingURL=workbox-7e5eb42b.js.map
+//# sourceMappingURL=workbox-7e5eb42b.js.map
